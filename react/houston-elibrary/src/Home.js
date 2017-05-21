@@ -20,8 +20,8 @@ class Home extends React.Component {
     componentWillMount() {
         const getImagePath = (libraryName) => {
             const imagePaths = { // lol
-                "Houston Area Public Library": houstonCard,
-                "Harris County Area Library": harrisCard,
+                "Houston Area Digital Media Catalog (TX)": houstonCard,
+                "Harris County Public Library (TX)": harrisCard,
             };
             return imagePaths[libraryName];
         };
@@ -48,7 +48,9 @@ class Home extends React.Component {
             }
             return library;
         });
-        this.setState({ libraries });
+        this.setState({ libraries }, () => {
+            this.searchRef.focus();
+        });
     }
 
     renderCards(libraries) {
@@ -72,8 +74,10 @@ class Home extends React.Component {
                     {cards}
                 </div>
 
-                <Search selectedLibraries={this.state.libraries}/>
+                <Search selectedLibraries={this.state.libraries}
+                        ref={(search) => { this.searchRef = search; }}/>
             </div>
+
         )
     }
 }

@@ -34,15 +34,13 @@ class App extends React.Component {
         });
       }
 
-
-
     render() {
         return (
             <Router>
                 <div className="App">
                     <Navbar inverse toggleable>
                       <NavbarToggler right onClick={this.toggle} />
-                      <NavbarBrand href="/"><h2>Houston E-Library Portal</h2></NavbarBrand>
+                      <NavbarBrand href="/"><h2>Houston Book Link</h2></NavbarBrand>
                       <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                           <NavItem>
@@ -59,9 +57,9 @@ class App extends React.Component {
                     <Route path="/resources" component={Resources}/>
                 </div>
             </Router>
+
         )
     }
-
 }
 
 export default App

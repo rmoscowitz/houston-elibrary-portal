@@ -1,0 +1,25 @@
+{
+  "name": "houston-elibrary-portal",
+  "version": "1.0.0",
+  "description": "Houston Hackathon 2017 Project",
+  "main": "node/server/server.js",
+  "scripts": {
+    "preinstall": "cd react/houston-elibrary && npm set progress=false && npm install && cd ../../ && cd node && npm set progress=false && npm install",
+    "start-frontend": "cd react/houston-elibrary && npm start",
+    "start-backend": "cd node && npm start",
+    "start-extractor": "python extactor/main.py",
+    "start-db-import": "python create_tables.py && python response_to_db.py && python create_text_search_vectors.py",
+    "start-prod": "npm install && npm run start-frontend | npm run start-backend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmoscowitz/houston-elibrary-portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmoscowitz/houston-elibrary-portal/issues"
+  },
+  "homepage": "https://github.com/rmoscowitz/houston-elibrary-portal#readme"
+}

@@ -1,12 +1,26 @@
-// TODO read from ENV vars
+const os = require('os');
+
+const user = process.env.PG_USER !== undefined 
+    ? process.env.PG_USER
+    : os.userInfo().username 
+
+const password = process.env.PG_PASSWORD !== undefined
+    ? process.env.PG_PASSWORD
+    : ''
+
+const dbname = process.env.PG_DBNAME !== undefined
+    ? process.env.PG_DBNAME
+    : 'postgres'
+
+console.log(user, password, dbname);
 
 const knex = require('knex')({
   client: 'pg',
   connection: {
     host     : 'localhost',
-    user     : 'dylan',
-    password : '',
-    database : 'mydb',
+    user     : user,
+    password : password,
+    database : dbname,
     charset  : 'utf8'
   }
 });
@@ -32,11 +46,10 @@ const LibraryBook = bookshelf.Model.extend({
 
 const Library = bookshelf.Model.extend({
   tableName: 'libraries',
-  tableName: 'libraries',
 });
 
 const BookFormat = bookshelf.Model.extend({
-    tableName: 'book_formats',
+  tableName: 'book_formats',
 });
 
 const Format = bookshelf.Model.extend({

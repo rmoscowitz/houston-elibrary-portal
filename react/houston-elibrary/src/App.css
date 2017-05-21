@@ -26,10 +26,17 @@
   color: #4c3e7b;
 }
 
+.main-container {
+  padding: 20px;
+}
+
 .navbar {
   background-color: #646ba7;
   border: none;
   color: white;
+    -webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .navbar li {
@@ -49,6 +56,8 @@
 
 .navbar-collapse {
   border-top: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 .nav-item a:hover {
@@ -56,7 +65,11 @@
 }
 
 .nav-item:hover {
-    background-color: white;
+  background-color: white;
+}
+
+.train {
+  min-width: 128px;
 }
 
 /*About*/
@@ -155,9 +168,13 @@
 .search-container input {
   margin-top: 20px;
   width: 90%;
+  max-width: 800px;
   height: 45px;
   padding-left: 10px;
   border: 1px solid darkgray;
+  -moz-box-shadow:    0px 0px 4px 0px #8879b9;
+  -webkit-box-shadow: 0px 0px 4px 0px #8879b9;
+  box-shadow:         0px 0px 4px 0px #8879b9;
 }
 
 .search-container input:focus{
@@ -165,13 +182,15 @@
 }
 
 .search-container ul {
-  padding-left: 5%;
+  padding-left: 0;
   margin-right: 5%;
   list-style-type: none;
   text-align: left;
   overflow-x: hidden;
   overflow-y: auto;
-  /*height: 200px;*/
+  max-width: 800px;
+  margin: auto;
+  width: 90%;
 }
 
 .search-container li .result {
@@ -210,12 +229,14 @@
     font-weight: bold;
 }
 
+.search-container li .result .checkout-info {
+  padding: 5px;
+}
+
 .search-container li .result .author {
 }
 
 /* Resources Pages */
-
-
 .resources-container img {
   display: block;
   margin: auto;
@@ -240,8 +261,4 @@
 
 .resources-container a {
   color: #4c3e7b; 
-}
-
-.resources-container .col-sm-6 {
-
 }
