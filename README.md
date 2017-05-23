@@ -10,7 +10,7 @@ See our [Houston Hackathon](https://houstonhackathon5.devpost.com/submissions) s
 ## To serve application
 * Checkout and navigate into the repo
 * Install node from https://nodejs.org/en/download/
-* run ```npm run start-prod``` in the base directory to start up Node express server and expose front-end
+* Run ```npm start``` in the base directory to start up Node express server and expose front-end
 
 ## Contributing
 * Please make changes in feature branches and submit a pull request to master.
