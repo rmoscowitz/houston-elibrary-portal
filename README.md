@@ -16,4 +16,4 @@ See our [Houston Hackathon](https://houstonhackathon5.devpost.com/submissions) s
 * Please make changes in feature branches and submit a pull request to master.
 * New collaborators welcome!
 
-![Houston Book Link logo](https://raw.githubusercontent.com/rmoscowitz/houston-elibrary-portal/master/react/houston-elibrary/src/logo3.png)
+![Houston Book Link logo](https://raw.githubusercontent.com/rmoscowitz/houston-elibrary-portal/master/src/logo3.png)

@@ -1,21 +1,21 @@
 const os = require('os');
 
-const user = process.env.PG_USER !== undefined 
-    ? process.env.PG_USER
-    : os.userInfo().username 
+function envOrElse(name, defaultValue) {
+  return process.env[name] !== undefined 
+      ? process.env[name]
+      : defaultValue
+}
 
-const password = process.env.PG_PASSWORD !== undefined
-    ? process.env.PG_PASSWORD
-    : ''
+const user = envOrElse('PG_USER', os.userInfo().username)
+const password = envOrElse('PG_PASSWORD', '')
+const dbname = envOrElse('PG_DBNAME', 'postgres')
+const host = envOrElse('PG_HOST', 'localhost')
 
-const dbname = process.env.PG_DBNAME !== undefined
-    ? process.env.PG_DBNAME
-    : 'postgres'
 
 const knex = require('knex')({
   client: 'pg',
   connection: {
-    host     : 'localhost',
+    host     : host,
     user     : user,
     password : password,
     database : dbname,

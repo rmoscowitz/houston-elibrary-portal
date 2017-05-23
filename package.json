@@ -31,8 +31,9 @@
     "debug": "babel-node debug server/index.js & npm run start-frontend",
     "start-backend": "babel-node server/index.js",
     "start-frontend": "react-scripts start",
-    "build": "react-scripts build && mkdir -p build/server && babel server -d build/server",
-    "prod": "npm run build && NODE_ENV='PRODUCTION' node build/server/index.js",
+    "build-frontend": "react-scripts build ",
+    "build-backend": "mkdir -p build/server && babel server -d build/server",
+    "prod": "NODE_ENV='PRODUCTION' node build/server/index.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

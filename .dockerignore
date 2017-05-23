@@ -1,0 +1,32 @@
+.idea/**
+**.pyc
+.idea
+extractor/response_data/*
+houston-elibrary-portal.iml
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+babel-cache
+build
+.gradle
+node_modules
+npm-debug.log
