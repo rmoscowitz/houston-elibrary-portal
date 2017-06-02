@@ -12,13 +12,13 @@ ReactGA.initialize('UA-100392725-1');
 
 const history = createHistory();
 history.listen(location => {
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname);
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
 });
 
 ReactDOM.render(
-    <App history={history}/>,
-    document.getElementById('root')
+  <App history={history}/>,
+  document.getElementById('root')
 );
 
 registerServiceWorker();
